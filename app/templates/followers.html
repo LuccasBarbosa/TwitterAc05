@@ -1,0 +1,59 @@
+    {% include 'components/header.html' %}
+
+      <section class="companies-info">
+        <div class="container">
+          <div class="company-title">
+            <h3>Seguidores</h3>
+          </div>
+
+          <div class="companies-list">
+            <div class="row">
+              <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="company_profile_info">
+                  <div class="company-up-info">
+
+                   {%if user|length >= 1 %}
+                      {% for c in user %}
+                      <img src="../static/images/resources/caio.jpeg" alt="">
+                      <h3>{{c.nome}}</h3>
+                      <h4>{{c.username}}</h4>
+                      <ul>
+                        <li>
+                          <a href="#" title="" class="btn-primary">Follow</a>
+                        </li>
+                      </ul>
+                      {% endfor %}
+                    {% endif %}
+
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- <div class="col-lg-3 col-md-4 col-sm-6 col-12">
+                <div class="company_profile_info">
+                  <div class="company-up-info">
+                    <img src="../static/images/resources/ronaldo.jpeg" alt="">
+                    <h3>Ronaldo Mendes</h3>
+                    <h4>@ronaldomendes</h4>
+                    <ul>
+                      <li>
+                        <a href="#" title="" class="btn-primary">Follow</a>
+                      </li>    
+                    </ul>
+                  </div>
+                </div>
+              </div> -->
+
+        </div>
+      </section>
+
+
+      
+
+
+      
+    </div>
+    
+
+    {% include 'components/footer.html' %}
